@@ -1,0 +1,162 @@
+/* banner */
+.banner {
+  background-image: url("/images/banner.png");
+  background-size: cover;
+  background-position: center;
+  height: 811px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10%;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 24px;
+}
+
+/* info helainusa */
+.information-helainusa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1093px;
+  height: 431px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.information-helainusa h1 {
+  font-size: 64px;
+  color: #1c1c1c;
+  margin: 0 110px 0 0;
+}
+
+.information-helainusa p {
+  font-size: 16px;
+  color: #1c1c1c;
+}
+
+/* story */
+.story-local-fashion {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.story-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 0;
+}
+
+.story-images .image img {
+  width: 215px;
+  height: 215px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.story-text {
+  flex: 1;
+  padding-left: 124px;
+}
+
+.story-text h1 {
+  max-width: 353px;
+  font-size: 48px;
+  color: #1c1c1c;
+  font-weight: 400;
+}
+
+.story-text p {
+  font-size: 16px;
+  color: #1c1c1c;
+}
+
+/* best seller */
+.best-seller {
+  margin: 0 auto 100px;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.best-seller .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 20%);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.best-seller .title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.best-seller .more-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.best-seller .items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.best-seller .item {
+  flex: 1;
+  margin: 12px;
+}
+
+.best-seller .item img {
+  width: 256px;
+  height: 256px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* Adjusted width for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex: 1 1 calc(100% - 20px); /* Adjusted width for mobile */
+  }
+}

@@ -1,0 +1,143 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: maroon;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.nav-icons i {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.title-container {
+    background-color: maroon;
+    max-width: 1200px;
+    
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    padding: 40px;
+}
+
+.content {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.content .table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 80%;
+}
+
+.product-table {
+    width: 70%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.product-table th,
+.product-table td {
+    padding: 8px;
+}
+
+.product-table th {
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.summary {
+    width: 25%;
+    background-color: maroon;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.summary-item + .summary-item {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: white;
+    color: maroon;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #f2f2f2;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: maroon;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.whatsapp-icon i {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}

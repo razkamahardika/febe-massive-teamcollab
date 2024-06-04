@@ -1,0 +1,70 @@
+.review-section {
+  padding: 0px 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.review-section h2 {
+  font-weight: 400;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.review {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.review-name-rating {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.review-header h3 {
+  font-size: 1.2em;
+  margin: 0;
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.rating {
+  display: flex;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.rating span {
+  font-size: 1.5em;
+  color: #ccc;
+}
+
+.rating .filled-star {
+  color: black;
+}
+
+.review-header h4 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin: 5px 0 0 0;
+  margin-left: 190px;
+  padding: 10px 0px;
+  font-weight: 400;
+}
+
+.review p {
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.6;
+  color: #333;
+  margin-left: 190px;
+  padding: 10px 0px;
+}

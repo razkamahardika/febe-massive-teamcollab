@@ -1,0 +1,73 @@
+.wishlist {
+  text-align: center;
+  padding: 0px;
+  background-color: #ffffff;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background: white;
+}
+
+.wishlist h1 {
+  background-color: #800000;
+  color: white;
+  padding: 60px 0;
+  font-size: 3em;
+}
+
+.products {
+  display: flex;
+  padding: 0px 100px;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.product img {
+  width: 160px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.product-info {
+  text-align: left;
+  justify-self: center;
+  padding: 10px 10px;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+.product-info h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #800000;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}

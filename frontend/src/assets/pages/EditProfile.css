@@ -1,0 +1,72 @@
+.edit-profile {
+  text-align: center;
+  padding: 0px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background: white;
+}
+.edit-profile h1 {
+  background-color: #800000;
+  color: white;
+  padding: 60px 0;
+  font-size: 3em;
+}
+
+.edit-forms {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.edit-forms form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-forms form h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.edit-forms form p {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.edit-forms label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.edit-forms input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-forms button {
+  background-color: #a3030f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-forms button:hover {
+  background-color: #87030c;
+}
