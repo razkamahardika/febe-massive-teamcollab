@@ -18,14 +18,15 @@ const ProductDetail = () => {
         <div className="product-details-section">
           <h1 className="product-name">Product Name</h1>
           <p className="product-price">Rp. 3.000.000,-</p>
-          <p className="product-description">budaya</p>
+          <p className="product-description">Jaket Batik Modern terbuat dari kain batik tulis premium dan katun berkualitas tinggi. Dengan desain bomber yang trendi, jaket ini dilengkapi resleting depan, saku fungsional, dan manset elastis. Tersedia dalam berbagai ukuran (S, M, L, dan XL). Perawatannya mudah: gunakan detergen ringan, dan setrika dengan suhu rendah pada bagian dalam.</p>
           <div className="product-variants">
             <div className="variant variant1"></div>
             <div className="variant variant2"></div>
             <div className="variant variant3"></div>
           </div>
           <div className="product-actions">
-            <button className="buy-now-button">Buy Now</button>
+            <button className="buy-now-button">
+              <a href="/Payment">Buy Now</a></button>
             <button className="put-in-cart-button">Put it on my cart</button>
           </div>
         </div>
@@ -34,10 +35,7 @@ const ProductDetail = () => {
       <div class="section__2">
         <h1>About this product</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
-          soluta nihil molestias sequi ad, illo quaerat vel. Qui, nobis
-          repudiandae voluptates molestiae consequuntur perferendis
-          exercitationem rem non quibusdam, ratione doloremque!
+          Jaket Batik Modern HelaiNusa dibuat dengan penuh dedikasi mulai dari pemilihan kain batik tulis berkualitas tinggi yang diproduksi oleh pengrajin lokal di Jawa Tengah. Setiap helai batik dihasilkan melalui proses tradisional yang teliti. Kain batik kemudian dipadukan dengan katun premium dan dijahit oleh penjahit berpengalaman menjadi jaket bomber yang stylish dan nyaman.
         </p>
       </div>
 

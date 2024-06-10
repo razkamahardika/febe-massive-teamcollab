@@ -2,14 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/pages/Login.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Login />
-    </div>
-  );
-}
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +24,7 @@ const Login = () => {
         </div>
         <h2>Login to Your Account</h2>
         <Link to="/Signup">
-          <button className="signup-button">Don’t have an account?</button>
+          <button className="goto-signup">Don’t have an account?</button>
         </Link>
       </div>
       <div className="login-right">

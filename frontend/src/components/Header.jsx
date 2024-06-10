@@ -12,7 +12,7 @@ const Header = () => {
         <nav class="left-menu">
           <ul>
             <li>
-              <a href="#men">Men</a>
+              <a href="/ProductPage">Men</a>
             </li>
             <li>
               <a href="#women">Women</a>
@@ -38,7 +38,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/Login">
+              <a href="/Profile">
                 <img src={userIcon} alt="Account" />
               </a>
             </li>

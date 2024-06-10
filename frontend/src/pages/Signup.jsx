@@ -92,9 +92,9 @@ const Signup = () => {
       </div>
       <div className="signup-right">
         <h2>Create a New Account</h2>
-        <button className="create">
-          <Link to="/Login">Already have an account?</Link>
-        </button>
+        <Link to="/Login">
+          <button className="create"> Already have an account? </button>
+        </Link>
       </div>
     </div>
   );

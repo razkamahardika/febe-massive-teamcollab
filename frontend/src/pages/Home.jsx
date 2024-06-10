@@ -16,11 +16,7 @@ function Home() {
 
             <section class="information-helainusa">
                 <h1>HelaiNusa.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue vestibulum arcu in dignissim. Mauris
-                    convallis
-                    vitae urna quis mattis. Nam orci libero, pulvinar eu turpis nec, sagittis tempor felis. Nunc eget feugiat
-                    lorem. Donec
-                    tellus justo, porttitor eu cursus cursus, pellentesque ut quam. Curabitur at arcu</p>
+                <p>HelaiNusa adalah platform e-commerce yang berfokus pada fashion lokal Indonesia. Kami berdedikasi untuk menyediakan wadah bagi para pecinta dan pencipta brand dalam negeri, dengan tujuan melestarikan serta mempromosikan kekayaan budaya Indonesia melalui fashion.</p>
             </section>
 
             <section className="story-local-fashion">
@@ -41,19 +37,15 @@ function Home() {
                 <div className="story-text">
                     <h1>The Story of A Local Fashion</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue
-                        vestibulum arcu in dignissim. Mauris convallis vitae urna quis mattis.
-                        Nam orci libero, pulvinar eu turpis nec, sagittis tempor felis. Nunc
-                        eget feugiat lorem. Donec tellus justo, porttitor eu cursus cursus,
-                        pellentesque ut quam. Curabitur at arcu.
+                        Di HelaiNusa, kami percaya bahwa setiap helai kain memiliki cerita dan setiap desain mencerminkan keindahan serta keragaman budaya kita. Kami bekerja sama dengan berbagai desainer dan pengrajin lokal untuk menghadirkan produk-produk berkualitas tinggi yang tidak hanya mengikuti tren, tetapi juga mengangkat nilai-nilai tradisional Indonesia
                     </p>
                 </div>
             </section>
 
             <section className="best-seller">
-                <div className="header">
-                    <h2 className="title">Best Seller</h2>
-                    <a href="#" className="more-link"></a>
+                <div className="best-header">
+                    <h2 className="best-title">Best Seller</h2>
+                    <a href="#" className="best-more-link">More+</a>
                 </div>
                 <div className="items">
                     <div className="item">
