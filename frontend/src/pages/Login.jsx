@@ -1,18 +1,38 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/pages/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [agree, setAgree] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Agree to privacy policy:", agree);
+
+    try {
+      const response = await fetch('http://localhost:8081/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        navigate('/ProductPage');
+      } else {
+        setMessage(result.message);
+      }
+    } catch (error) {
+      console.error('Error during fetch:', error);
+      setMessage('An error occurred. Please try again.');
+    }
   };
 
   return (
@@ -31,6 +51,7 @@ const Login = () => {
         <div className="login-form-container">
           <form onSubmit={handleSubmit}>
             <h2>Login</h2>
+            {message && <p>{message}</p>}
             <div className="input-group">
               <label htmlFor="email">Email</label>
               <input
@@ -62,11 +83,9 @@ const Login = () => {
                 I agree to the <a href="#">privacy policy</a>
               </label>
             </div>
-            <Link to="/ProductPage">
-              <button type="submit" className="login-button">
-                Login
-              </button>
-            </Link>
+            <button type="submit" className="login-button">
+              Login
+            </button>
           </form>
         </div>
       </div>

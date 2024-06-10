@@ -51,6 +51,7 @@ const Profile = () => {
                 </div>
               </div>
             ))}
+
           </div>
           <div className="column">
             <h2>Aktivitas</h2>
