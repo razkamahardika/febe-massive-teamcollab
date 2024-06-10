@@ -1,0 +1,60 @@
+.carousel-container {
+  width: 334px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 24px; /* Add border-radius to the container */
+  position: relative;
+}
+
+.carousel .carousel-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Set a fixed height for the carousel */
+}
+
+.carousel .carousel-slider .control-arrow {
+  display: none; /* Hide the arrows */
+}
+
+.carousel .carousel-slider .control-dots .dot {
+  background: #007bff;
+}
+
+.carousel .carousel-slider .control-dots .dot.selected {
+  background: #0056b3;
+}
+
+.carousel-slide {
+  position: absolute;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  border-radius: 24px;
+  object-fit: fill; /* Use 'cover' to maintain aspect ratio and fill the container */
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 160px; /* Ensure the height does not exceed 160px */
+}
+
+.carousel-slide.middle {
+  transform: scale(1.2); /* Larger size for the middle image */
+}
+
+.carousel-slide.left, .carousel-slide.right {
+  transform: scale(0.8); /* Smaller size for the side images */
+}
+
+.carousel-slide.left {
+  transform: translateX(-120%) scale(0.8); /* Position for the left image */
+}
+
+.carousel-slide.right {
+  transform: translateX(120%) scale(0.8); /* Position for the right image */
+}

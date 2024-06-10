@@ -1,25 +1,60 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/pages/Signup.css";
 
 const Signup = () => {
+  // State variables to store user inputs
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [agree, setAgree] = useState(false);
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  // Handler for form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission logic here
-    console.log({
+
+    // Log the user input data
+    console.log('User data:', {
       firstName,
       lastName,
       email,
       password,
-      agree,
     });
+
+    try {
+      const response = await fetch('http://localhost:8081/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          password,
+        }),
+      });
+
+      console.log('Response status:', response.status);
+
+      if (response.ok) {
+        // If registration is successful, redirect to login page
+        navigate('/login');
+      } else {
+        // If registration fails, display the error message
+        const result = await response.text();
+        setMessage(result);
+        console.log('Error message:', result);
+      }
+    } catch (error) {
+      console.error('Error during fetch:', error);
+      setMessage('An error occurred. Please try again.');
+    }
   };
+
 
   return (
     <div className="signup-container">
@@ -31,6 +66,7 @@ const Signup = () => {
         <div className="signup-form-container">
           <form onSubmit={handleSubmit}>
             <h2>Sign Up</h2>
+            {message && <p>{message}</p>}
             <div className="input-group-row">
               <div className="input-group">
                 <label htmlFor="firstName">First Name</label>
@@ -79,6 +115,7 @@ const Signup = () => {
                 id="agree"
                 checked={agree}
                 onChange={(e) => setAgree(e.target.checked)}
+                required
               />
               <label htmlFor="agree">
                 I agree to the <a href="#">privacy policy</a>
@@ -92,7 +129,7 @@ const Signup = () => {
       </div>
       <div className="signup-right">
         <h2>Create a New Account</h2>
-        <Link to="/Login">
+        <Link to="/login">
           <button className="create"> Already have an account? </button>
         </Link>
       </div>

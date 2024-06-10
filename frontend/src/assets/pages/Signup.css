@@ -61,7 +61,7 @@ body {
   padding: 54px 60px;
   border-radius: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 350px; /* Reduced width */
+  margin-top: 100px;
 }
 
 .signup-left form {
