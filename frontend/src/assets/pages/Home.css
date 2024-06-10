@@ -108,7 +108,7 @@
   text-align: center;
 }
 
-.best-seller .header {
+.best-seller .best-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,13 +117,13 @@
   margin-bottom: 20px;
 }
 
-.best-seller .title {
+.best-seller .best-title {
   margin: 0;
   font-weight: 400;
   font-size: 24px;
 }
 
-.best-seller .more-link {
+.best-seller .best-more-link {
   text-decoration: none;
   color: #000;
   font-weight: 600;
