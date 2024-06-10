@@ -10,7 +10,7 @@ const ProductPage = () => {
   const [flipped, setFlipped] = useState({});
   const [selectedType, setSelectedType] = useState("");
   const [priceInput, setPriceInput] = useState(false);
-  const [maxPrice, setMaxPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState("");
 
   useEffect(() => {
     fetch('http://localhost:8081/products')
@@ -53,7 +53,7 @@ const ProductPage = () => {
       <Header />
 
       <div className="container">
-        <div className='title-containers'>
+        <div className="title-containers">
           <h1 className="page-title">Let's find something</h1>
           <div className="filter-container">
             <Dropdown
@@ -63,12 +63,15 @@ const ProductPage = () => {
             <div className="filter-item">
               <div className="filter-label" onClick={togglePriceInput}>
                 Max Price
-                <span className={`filter-icon ${priceInput ? 'open' : ''}`}>+</span>
+                <span className={`filter-icon ${priceInput ? "open" : ""}`}>
+                  +
+                </span>
               </div>
               {priceInput && (
                 <input
                   className="filter-input"
-                  type="number" id="price"
+                  type="number"
+                  id="price"
                   name="price"
                   value={maxPrice}
                   onChange={handlePriceChange}
@@ -95,7 +98,9 @@ const ProductPage = () => {
               </Link>
               <div className="product-details">
                 <div className="product-name">{product.name}</div>
-                <div className="product-price">Rp. {product.price.toLocaleString()}</div>
+                <div className="product-price">
+                  Rp. {product.price.toLocaleString()}
+                </div>
               </div>
             </div>
           ))}

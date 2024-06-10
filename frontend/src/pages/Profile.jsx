@@ -40,13 +40,14 @@ const Profile = () => {
                 <h2>{status}</h2>
                 <div className="product">
                   <img
+                  href="#"
                     src="/images/product1.png"
                     alt="Product Image"
                     className="product-image"
                   />
                   <div className="product-info">
-                    <p className="product-name">Nama Produk</p>
-                    <p className="product-description">Deskripsi Produk</p>
+                    <p className="product-name">Baju Batik Pria</p>
+                    <p className="product-description"> kain yang dihiasi dengan motif dan corak khas yang dibuat melalui teknik pewarnaan dengan menggunakan malam (lilin) sebagai perintang warna.</p>
                   </div>
                 </div>
               </div>
@@ -97,7 +98,7 @@ const Profile = () => {
             ))}
           </div>
           <div className="contact-button">
-            <img src="./images/whatsapp-icon.png" alt="Ikon WhatsApp" />
+            <img href="https://wa.me/yourwhatsappnumber" src="./images/whatsapp-icon.png" alt="Ikon WhatsApp" />
           </div>
         </div>
       </div>
