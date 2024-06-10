@@ -12,13 +12,13 @@ const Header = () => {
         <nav class="left-menu">
           <ul>
             <li>
-              <a href="#men">Men</a>
+              <a href="/ProductPage">Men</a>
             </li>
             <li>
-              <a href="#women">Women</a>
+              <a href="/ProductPage">Women</a>
             </li>
             <li>
-              <a href="#accessories">Accessories</a>
+              <a href="/ProductPage">Accessories</a>
             </li>
           </ul>
         </nav>
@@ -38,17 +38,17 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/Login">
+              <a href="/Profile">
                 <img src={userIcon} alt="Account" />
               </a>
             </li>
             <li>
-              <a href="#wishlist">
+              <a href="/Wishlist">
                 <img src={heartIcon} alt="Wishlist" />
               </a>
             </li>
             <li>
-              <a href="#cart">
+              <a href="/Chart">
                 <img src={cartIcon} alt="Cart" id="cart-icon" />
               </a>
             </li>

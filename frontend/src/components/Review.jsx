@@ -4,16 +4,15 @@ const reviews = [
   {
     name: "Kufra Kiboy",
     rating: 5,
-    title: "Review Title",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue vestibulum arcu in dignissim. Mauris convallis vitae urna quis mattis. Nam orci libero, pulvinar eu turpis nec, sagittis tempor felis. Nunc eget feugiat lorem. Donec tellus justo, porttitor eu cursus cursus, pellentesque ut quam.",
+    title: "Nyaman, tidak menerawang",
+    text: "Baju bagus untuk dipakain untuk kekondangan",
   },
   {
     name: "Kadita Sanz",
     rating: 3,
-    title: "Review Title",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue vestibulum arcu in dignissim. Mauris convallis vitae urna quis mattis. Nam orci libero, pulvinar eu turpis nec, sagittis tempor felis. Nunc eget feugiat lorem. Donec tellus justo, porttitor eu cursus cursus, pellentesque ut quam.",
-  },
-];
+    title: "Kurirnya Kurang Baik",
+    text: "Pakaiannya bagus, cuman kurirnya aja kurang baik ",
+}];
 
 const Review = () => {
   return (

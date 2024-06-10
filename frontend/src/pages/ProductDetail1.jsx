@@ -4,21 +4,21 @@ import Header from "../components/Header";
 import Review from "../components/Review";
 import { Link } from "react-router-dom";
 
-const ProductDetail = () => {
+const ProductDetail1 = () => {
   return (
     <>
       <Header />
       <section className="product-page">
         <div className="product-image-section">
           <img
-            src="../images/product1.png" // Replace with your image path
+            src="../images/image2.png" // Replace with your image path
             alt="Product"
             className="product-image"
           />
         </div>
         <div className="product-details-section">
-          <h1 className="product-name">Baju Batik Pria</h1>
-          <p className="product-price">Rp. 3.000.000,-</p>
+          <h1 className="product-name">Outher Pria</h1>
+          <p className="product-price">Rp. 340.000,-</p>
           <p className="product-description">Men</p>
           <div className="product-variants">
             <div className="variant variant1"></div>
@@ -39,7 +39,7 @@ const ProductDetail = () => {
       <div class="section__2">
         <h1>About this product</h1>
         <p>
-        Baju batik pria adalah pakaian tradisional Indonesia yang menggunakan kain batik, yaitu kain yang dihiasi dengan motif dan corak khas yang dibuat melalui teknik pewarnaan dengan menggunakan malam (lilin) sebagai perintang warna. Pakaian ini sering dipakai pada acara formal maupun semi-formal, seperti upacara pernikahan, acara kantor, dan perayaan nasional.
+        Outer batik pria menambahkan sentuhan budaya dan keunikan pada pakaian modern, memungkinkan pria untuk mengekspresikan identitas dan kebanggaan akan warisan budaya mereka.
         </p>
       </div>
 
@@ -62,7 +62,7 @@ const ProductDetail = () => {
             <img src="/images/image1.png" alt="item 4" />
           </div>
           <div className="item">
-           <Link to="/ProductDetail1"> <img src="/images/image2.png" alt="item 4" /></Link>
+            <img src="/images/image2.png" alt="item 4" />
           </div>
           <div className="item">
             <img src="/images/image3.png" alt="item 4" />
@@ -75,4 +75,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default ProductDetail1;
