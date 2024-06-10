@@ -15,10 +15,10 @@ const Header = () => {
               <a href="/ProductPage">Men</a>
             </li>
             <li>
-              <a href="#women">Women</a>
+              <a href="/ProductPage">Women</a>
             </li>
             <li>
-              <a href="#accessories">Accessories</a>
+              <a href="/ProductPage">Accessories</a>
             </li>
           </ul>
         </nav>
@@ -43,12 +43,12 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#wishlist">
+              <a href="/Wishlist">
                 <img src={heartIcon} alt="Wishlist" />
               </a>
             </li>
             <li>
-              <a href="#cart">
+              <a href="/Chart">
                 <img src={cartIcon} alt="Cart" id="cart-icon" />
               </a>
             </li>

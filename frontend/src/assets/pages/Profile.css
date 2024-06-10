@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -61,17 +61,18 @@ body {
 }
 
 .order-status {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin-top: 20px;
 }
 
 .status-card {
-  flex: 1;
-  min-width: 200px;
   background-color: #800000;
   color: white;
-  padding: 20px;
   border-radius: 10px;
+  padding: 15px; /* Smaller padding */
+  font-size: 0.75rem; /
 }
 
 .status-card h2 {
@@ -106,7 +107,7 @@ body {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #25d366;
+  background-color: #800000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -121,13 +122,12 @@ body {
 
 .column {
   flex: 1;
-  margin: 0 20px;
+  margin: 5px 10px;
 }
 
 .column h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .item {
@@ -137,7 +137,7 @@ body {
 }
 
 .item i {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-right: 10px;
 }
 

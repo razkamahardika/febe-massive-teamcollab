@@ -1,19 +1,18 @@
-import HeaderHome from '../components/HeaderHome'
-import Footer from '../components/Footer'
-import '../assets/pages/Home.css'
+import HeaderHome from "../components/HeaderHome";
+import Footer from "../components/Footer";
+import "../assets/pages/Home.css";
 
 function Home() {
-    return (
-        <>
-            <HeaderHome />
+  return (
+    <>
+      <HeaderHome />
 
-            <section class="banner">
-                <div class="banner-content">
-                    <h1>LOCAL FASHION</h1>
-                    <p>Menjelajahi keindahan tekstil lokal dalam fashion modern.</p>
-                </div>
-            </section>
-
+      <section class="banner">
+        <div class="banner-content">
+          <h1>LOCAL FASHION</h1>
+          <p>Menjelajahi keindahan tekstil lokal dalam fashion modern.</p>
+        </div>
+      </section>
             <section class="information-helainusa">
                 <h1>HelaiNusa.</h1>
                 <p>HelaiNusa adalah platform e-commerce yang berfokus pada fashion lokal Indonesia. Kami berdedikasi untuk menyediakan wadah bagi para pecinta dan pencipta brand dalam negeri, dengan tujuan melestarikan serta mempromosikan kekayaan budaya Indonesia melalui fashion.</p>
@@ -67,4 +66,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home;
