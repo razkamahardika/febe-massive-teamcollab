@@ -9,8 +9,30 @@ app.use(cors());
 app.use(express.json());
 
 // Get all products
-app.get('/api/products', (req, res) => {
+app.get("/products", (req, res) => {
     const sql = 'SELECT * FROM products';
+    db.query(sql, (err, results) => {
+        if (err) {
+            res.status(500).send(err);
+            return;
+        }
+        res.json(results);
+    });
+});
+
+app.get("/login", (req, res) => {
+    const sql = 'SELECT * FROM login';
+    db.query(sql, (err, results) => {
+        if (err) {
+            res.status(500).send(err);
+            return;
+        }
+        res.json(results);
+    });
+});
+
+app.get("/signup", (req, res) => {
+    const sql = 'SELECT * FROM signup';
     db.query(sql, (err, results) => {
         if (err) {
             res.status(500).send(err);
