@@ -29,9 +29,11 @@ app.use(express.json());
 
 // Get all products
 app.get('/products', (req, res) => {
+    console.log('Products route hit');
     let sql = 'SELECT * FROM products';
     db.query(sql, (err, result) => {
         if (err) {
+            console.log('Database error:', err);
             return res.status(500).send(err);
         }
         res.json(result);
@@ -176,7 +178,6 @@ app.post('/api/upload-proof', upload.single('proofImage'), (req, res) => {
         res.status(200).send('File uploaded successfully');
     });
 });
-
 
 // Start the server
 app.listen(port, () => {

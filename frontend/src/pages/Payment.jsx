@@ -39,11 +39,21 @@ const Payment = () => {
 
   const handleCouponApply = async () => {
     try {
-      const response = await fetch(`http://localhost:8081/api/coupons/${coupon}`);
-      if (response.ok) {
-        const couponData = await response.json();
-        setDiscount(couponData.discountAmount);
-        setTotal((price - couponData.discountAmount) + (price * taxRate));
+      const response = await fetch('http://localhost:8081/api/validate-coupon', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ coupon }),
+      });
+
+      const result = await response.json();
+
+      if (result.valid) {
+        setDiscount(result.discount);
+        const discountedPrice = price - result.discount;
+        const updatedTotal = discountedPrice + discountedPrice * taxRate;
+        setTotal(updatedTotal);
         console.log("Coupon Applied:", coupon);
       } else {
         console.error("Invalid coupon code");
@@ -53,41 +63,41 @@ const Payment = () => {
     }
   };
 
-const handleBuyNow = async () => {
-  if (!validateForm()) {
-    return;
-  }
-
-  const orderData = {
-    product_name: product.name,
-    quantity: 1,
-    price: price - discount,
-    address: address,
-    city: city,
-    province: province,
-    total: total,
-  };
-
-  try {
-    const response = await fetch("http://localhost:8081/api/orders", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(orderData),
-    });
-
-    if (response.ok) {
-      console.log("Order placed successfully.");
-      navigate("/payment-proof"); // Navigate to payment proof page
-    } else {
-      const errorText = await response.text(); // Get response body as text
-      console.error("Error saving order:", errorText);
+  const handleBuyNow = async () => {
+    if (!validateForm()) {
+      return;
     }
-  } catch (error) {
-    console.error("Error saving order:", error);
-  }
-};
+
+    const orderData = {
+      product_name: product.name,
+      quantity: 1,
+      price: price - discount,
+      address: address,
+      city: city,
+      province: province,
+      total: total,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8081/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+      });
+
+      if (response.ok) {
+        console.log("Order placed successfully.");
+        navigate("/payment-proof"); // Navigate to payment proof page
+      } else {
+        const errorText = await response.text(); // Get response body as text
+        console.error("Error saving order:", errorText);
+      }
+    } catch (error) {
+      console.error("Error saving order:", error);
+    }
+  };
 
 
   if (!product) {
