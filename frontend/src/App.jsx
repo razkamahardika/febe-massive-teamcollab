@@ -9,9 +9,8 @@ import Wishlist from "./pages/Wishlist";
 import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
 import ProductDetail from "./pages/ProductDetail";
-import ProductDetail1 from "./pages/ProductDetail1";
-import "./App.css";
 import PaymentProof from "./pages/PaymentProof";
+import "./App.css";
 
 function App() {
   return (
@@ -28,6 +27,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/editprofile" element={<EditProfile />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/payment-proof" element={<PaymentProof />} />
         </Routes>
       </BrowserRouter>
     </>

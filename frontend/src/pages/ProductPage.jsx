@@ -52,7 +52,7 @@ const ProductPage = () => {
     <>
       <Header />
 
-      <div className="container">
+      <div className="product-container">
         <div className="title-containers">
           <h1 className="page-title">Let's find something</h1>
           <div className="filter-container">

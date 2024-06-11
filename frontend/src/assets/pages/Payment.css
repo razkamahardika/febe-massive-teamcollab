@@ -1,38 +1,172 @@
 .order-summary {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .item,
-  .coupon,
-  .subtotal,
-  .tax,
-  .total,
-  .personal-info {
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #8b0000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #a52a2a;
-  }
-  
+  max-width: 1200px;
+  margin: 72px auto;
+  border-radius: 10px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.order-summary h2 {
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 20%);
+  padding-bottom: 20px;
+}
+
+.order-summary table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.order-summary .prodname {
+  text-align: left;
+  padding-right: 500px;
+}
+
+.order-summary .quantity {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.order-summary .price {
+  text-align: center;
+}
+
+.order-summary th {
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.item,
+.subtotal,
+.tax,
+.total,
+.personal-info {
+  margin-bottom: 20px;
+}
+
+.coupon-container {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 20%);
+}
+
+.coupon-container input {
+  flex: 1;
+  max-width: 160px;
+  height: 48px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.coupon-container button {
+  max-width: 127px;
+  height: 48px;
+  padding: 12px 40px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.subtotal,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.subtotal h2,
+.total h2 {
+  font-weight: 400;
+  font-size: 24px;
+  border-bottom: none;
+  align-items: center;
+  padding: 0;
+}
+
+.tax h2 {
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: none;
+  padding: 0;
+}
+
+.personal-info h3 {
+  border-top: 1px solid rgba(0, 0, 0, 20%);
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.personal-info .city-province {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.personal-info .city-province > div {
+  flex: 1;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #8b0000;
+  color: white;
+  padding: 12px 110px;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bottom-button {
+  background-color: #8b0000;
+  color: white;
+  padding: 12px 110px;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 400px;
+  margin-top: 42px;
+}
+
+button:hover {
+  background-color: #a52a2a;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}

@@ -1,5 +1,7 @@
 .review-section {
-  padding: 0px 100px;
+  margin: 0 auto;
+  max-width: 1200px;
+    padding: 20px;
   font-family: "Poppins", sans-serif;
 }
 
