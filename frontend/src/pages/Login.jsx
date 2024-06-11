@@ -27,7 +27,7 @@ const Login = () => {
       if (response.ok) {
         // Store userId in local storage
         localStorage.setItem('userId', result.userId);
-        navigate('/Profile');
+        navigate('/productpage');
       } else {
         setMessage(result.message);
       }
