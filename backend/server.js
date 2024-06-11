@@ -2,12 +2,30 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
+const multer = require('multer');
+const path = require('path');
 const db = require('./config/database');
 const app = express();
 const port = 8081;
 
 app.use(cors());
 app.use(bodyParser.json());
+
+
+// Define storage for the uploaded files
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/'); // Upload files to the 'uploads' directory
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)); // Generate unique filename
+    }
+});
+
+// Initialize multer upload middleware
+const upload = multer({ storage: storage });
+
+app.use(express.json());
 
 // Get all products
 app.get('/products', (req, res) => {
@@ -107,6 +125,58 @@ app.post('/api/login', (req, res) => {
         res.status(200).send({ message: 'Login successful.' });
     });
 });
+
+//Payment
+app.post("/api/orders", (req, res) => {
+    const { product_name, quantity, price, address, city, province, total } = req.body;
+
+    const query = "INSERT INTO orders (product_name, quantity, price, address, city, province, total) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    db.query(query, [product_name, quantity, price, address, city, province, total], (err, results) => {
+        if (err) {
+            console.error("Error inserting order data:", err);
+            res.status(500).send("Error inserting order data");
+            return;
+        }
+        res.status(200).send("Order data inserted successfully");
+    });
+});
+
+// Endpoint to validate coupon code
+app.post('/api/validate-coupon', (req, res) => {
+    const { coupon } = req.body;
+
+    const query = 'SELECT * FROM coupons WHERE code = ? AND is_active = TRUE AND expiry_date >= CURDATE()';
+    db.query(query, [coupon], (err, results) => {
+        if (err) {
+            console.error('Error fetching coupon:', err);
+            res.status(500).json({ error: 'Internal server error' });
+        } else if (results.length > 0) {
+            res.json({ valid: true, discount: results[0].discount });
+        } else {
+            res.json({ valid: false });
+        }
+    });
+});
+
+// Endpoint to handle file upload
+app.post('/api/upload-proof', upload.single('proofImage'), (req, res) => {
+    const { orderId } = req.body; // Assuming you also want to associate the proof image with an order
+
+    // Get the file path
+    const filePath = req.file.path;
+
+    // Update the database with the file path
+    const query = 'UPDATE payments SET proof_image_path = ? WHERE order_id = ?';
+    db.query(query, [filePath, orderId], (err, results) => {
+        if (err) {
+            console.error('Error updating database:', err);
+            return res.status(500).send('Error updating database');
+        }
+        res.status(200).send('File uploaded successfully');
+    });
+});
+
 
 // Start the server
 app.listen(port, () => {

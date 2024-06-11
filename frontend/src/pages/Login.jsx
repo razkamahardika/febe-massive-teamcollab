@@ -25,7 +25,9 @@ const Login = () => {
       const result = await response.json();
 
       if (response.ok) {
-        navigate('/ProductPage');
+        // Store userId in local storage
+        localStorage.setItem('userId', result.userId);
+        navigate('/Profile');
       } else {
         setMessage(result.message);
       }
