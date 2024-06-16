@@ -174,8 +174,6 @@ app.post('/api/upload-proof', upload.single('proofImage'), (req, res) => {
     res.status(200).send('File uploaded successfully');
 });
 
-
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
