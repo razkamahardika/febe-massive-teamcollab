@@ -80,7 +80,7 @@
 }
 
 .preview-image-small {
-  max-width: 200px; /* Set a maximum width for the image */
-  max-height: 200px; /* Set a maximum height for the image */
-  margin-top: 10px; /* Adjust margin top if needed */
+max-width: 200px; /* Set a maximum width for the image */
+max-height: 200px; /* Set a maximum height for the image */
+margin-top: 10px; /* Adjust margin top if needed */
 }

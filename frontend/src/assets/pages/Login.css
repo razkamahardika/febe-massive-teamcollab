@@ -68,6 +68,7 @@
   border-radius: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 50%;
+  margin: 80px 0;
 }
 
 .login-right form {
@@ -161,7 +162,7 @@
   border: none;
   cursor: pointer;
   border-radius: 28px;
-  margin: 100px 65px 0;
+  margin: 40px 65px 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
