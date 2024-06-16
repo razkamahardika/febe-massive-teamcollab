@@ -112,12 +112,24 @@ const ProductDetail = () => {
           <a href="#" className="more-link">More+</a>
         </div>
         <div className="items">
-          {recommendedProducts.map((recProduct) => (
-            <div key={recProduct.id} className="recommended-item">
-              <img src={recProduct.imageUrl} alt={recProduct.name} />
-              <p>{recProduct.name}</p>
-            </div>
-          ))}
+          <div className="item">
+            <img src="/images/image5.png" alt="item 1" />
+          </div>
+          <div className="item">
+            <img src="/images/image6.png" alt="item 2" />
+          </div>
+          <div className="item">
+            <img src="/images/image7.png" alt="item 3" />
+          </div>
+          <div className="item">
+            <img src="/images/image3.png" alt="item 4" />
+          </div>
+          <div className="item">
+            <img src="/images/image4.png" alt="item 4" />
+          </div>
+          <div className="item">
+            <img src="/images/image2.png" alt="item 4" />
+          </div>
         </div>
       </section>
 

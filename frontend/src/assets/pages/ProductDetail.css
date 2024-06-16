@@ -21,6 +21,7 @@
   border: none;
   cursor: pointer;
   z-index: 1;
+  padding: 0;
 }
 
 .wishlist-button:hover {
@@ -107,12 +108,16 @@
   border-radius: 24px;
   cursor: pointer;
   font-size: 12px;
+  max-width: 290px;
+  height: 48px;
+  margin-left: 120px;
 }
 
 .buy-now-button {
   background-color: darkred;
   color: white;
   border: none;
+  margin-top: 20px;
 }
 
 .put-in-cart-button {
@@ -150,14 +155,12 @@
   margin: 0 auto 100px;
   max-width: 1200px;
   text-align: center;
-  border: solid;
 }
 
 .recomendation .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 20%);
   padding-bottom: 5px;
   margin-bottom: 20px;
 }

@@ -8,8 +8,8 @@ import "../assets/components/Header.css";
 const Header = () => {
   return (
     <header>
-      <div class="top-bar">
-        <nav class="left-menu">
+      <div className="top-bar">
+        <nav className="left-menu">
           <ul>
             <li>
               <a href="/ProductPage">Men</a>
@@ -23,14 +23,14 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div class="logo">
+        <div className="logo">
           <a href="/home">
             <img src={helaiLogo} alt="HelaiNusa Logo" />
-            <span class="logo-text">HelaiNusa.</span>
+            <span className="logo-text">HelaiNusa.</span>
           </a>
         </div>
 
-        <nav class="right-menu">
+        <nav className="right-menu">
           <ul>
             <li>
               <a href="#search">
