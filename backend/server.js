@@ -169,11 +169,8 @@ app.post('/api/upload-proof', upload.single('proofImage'), (req, res) => {
 
     const filePath = req.file.path;
 
-    // You can perform any additional logic here if needed
-
     res.status(200).send('File uploaded successfully');
 });
-
 
 
 // Start the server
