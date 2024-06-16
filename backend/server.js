@@ -163,20 +163,15 @@ app.post('/api/validate-coupon', (req, res) => {
 
 // Endpoint to handle file upload
 app.post('/api/upload-proof', upload.single('proofImage'), (req, res) => {
-    const { orderId } = req.body; // Assuming you also want to associate the proof image with an order
+    if (!req.file) {
+        return res.status(400).send('No file uploaded');
+    }
 
-    // Get the file path
     const filePath = req.file.path;
 
-    // Update the database with the file path
-    const query = 'UPDATE payments SET proof_image_path = ? WHERE order_id = ?';
-    db.query(query, [filePath, orderId], (err, results) => {
-        if (err) {
-            console.error('Error updating database:', err);
-            return res.status(500).send('Error updating database');
-        }
-        res.status(200).send('File uploaded successfully');
-    });
+    // You can perform any additional logic here if needed
+
+    res.status(200).send('File uploaded successfully');
 });
 
 // Start the server
